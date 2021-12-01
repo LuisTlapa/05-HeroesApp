@@ -10,9 +10,18 @@ import { Routes, RouterModule } from '@angular/router';
 const routesHeroes: Routes =[
   {
     path: '',
+    component:HomeComponent,
     children:[
       {
+        path:'listado',
+        component:ListadoComponent
+      },
+      {
         path:'agregar',
+        component:AgregarComponent
+      },
+      {
+        path:'editar/:id',
         component:AgregarComponent
       },
       {
@@ -20,20 +29,12 @@ const routesHeroes: Routes =[
         component:BuscarComponent
       },
       {
-        path:'heroe',
+        path:':id',
         component:HeroeComponent
-      },
-      {
-        path:'home',
-        component:HomeComponent
-      },
-      {
-        path:'listado',
-        component:ListadoComponent
-      },
+      },      
       {
         path: '**',
-        redirectTo: 'home'
+        redirectTo: 'listado'
       }
     ]
   }

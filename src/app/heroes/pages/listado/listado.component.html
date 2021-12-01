@@ -1,1 +1,19 @@
-<p>listado works!</p>
+<h1>Listado de Heroes</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px"> 
+    <!--fxLayout es para que sea en filas row y el weap para solo el tamaño de pantalla-->
+    <!--fxLayoutAlagin es para centrar las targetas-->
+    <!--fxLayoutGap es para centrar las targetas hacia los lados-->
+    <div fxFlex = "20"
+         fxFlex.lg="15"
+         fxFlex.sm="30"
+         *ngFor="let heroe of heroes"
+            > <!--// el 20% del row (Tamaño)-->
+        
+
+    <app-heroe-targeta [heroe]="heroe"></app-heroe-targeta>
+    </div>
+</div>
+
