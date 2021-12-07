@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '../material/material.module';
 import { HeroeTargetaComponent } from './components/heroe-targeta/heroe-targeta.component';
 import { ImagenesPipe } from './pipe/imagenes.pipe';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 
@@ -26,6 +27,7 @@ import { ImagenesPipe } from './pipe/imagenes.pipe';
     ListadoComponent,
     HeroeTargetaComponent,
     ImagenesPipe,
+    ConfirmarComponent,
   ],
   imports: [
     CommonModule,
