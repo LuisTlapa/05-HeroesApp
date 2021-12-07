@@ -53,7 +53,7 @@
         </mat-form-field>
         
         <mat-form-field >
-            <mat-label>Foto url*</mat-label>
+            <mat-label>Foto url</mat-label>
             <input 
                 matInput
                 type="url"
@@ -61,12 +61,24 @@
                 required>
         </mat-form-field>
         <br>
-        <button mat-raised-button color="primary" (click)="guardar()">
-            <mat-icon>
-                save
-            </mat-icon>
-            Guardar
-        </button>
+
+        <div fxLayout="">
+
+            <button mat-raised-button color="primary" (click)="guardar()">
+                <mat-icon>
+                    save
+                </mat-icon>
+                Guardar
+            </button>
+
+            <span class="spacer"></span>
+            
+            <button  *ngIf="heroe.id"
+                mat-stroked-button   color="warn" (click)="borrarHeroe()">
+                <mat-icon>remove</mat-icon>
+                Borrar
+            </button>
+        </div>
         
 
     </div>
